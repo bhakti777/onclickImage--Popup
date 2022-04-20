@@ -83,13 +83,13 @@ const MainPage = () => {
           {empDetails.map((employee) => {
             return (
             <>
-           {show && <DisplayEmployees imageInfo={imageInfo} handleToggle={handleToggle} showModal={showModal} handleShow={handleShow}/>}
+           {show && <DisplayEmployees employee={employee} handleToggle={handleToggle} showModal={showModal} handleShow={handleShow} imageInfo={imageInfo}/>}
             </>
             )
           })}
         </div>
 
-        {showModal && <ModalEmployeeInfo empInfo={empInfo} showModal={showModal} handleClose={handleClose} />}
+        {showModal && <ModalEmployeeInfo imageInfo={imageInfo} showModal={showModal} handleClose={handleClose} />}
 
       </Container>
     </>

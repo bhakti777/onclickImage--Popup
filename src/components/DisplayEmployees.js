@@ -1,6 +1,6 @@
 import React from "react";
 
-const DisplayEmployees=({employee,handleShow})=>{
+const DisplayEmployees=({employee,handleShow,imageInfo})=>{
 
     return(
         <>
@@ -14,7 +14,7 @@ const DisplayEmployees=({employee,handleShow})=>{
 
                   <p>{employee.email}</p>
 
-                  <img src={employee.avatar}  onClick={()=>{handleShow(employee)}}/>
+                  <img src={employee.avatar}  onClick={()=>{handleShow(imageInfo)}}/>
 
                 </div>
         </>
