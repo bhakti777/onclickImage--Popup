@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-const ModalEmployeeInfo = ({ empInfo, showModal, handleClose }) => {
+const ModalEmployeeInfo = ({ imageInfo, showModal, handleClose }) => {
   return (
     <>
       <Modal showModal={showModal} onHide={handleClose}>
@@ -11,10 +11,10 @@ const ModalEmployeeInfo = ({ empInfo, showModal, handleClose }) => {
         </Modal.Header>
 
         <Modal.Body>
-          <p> employee Id :{empInfo.id} </p>
-          <p> employee firstname:{empInfo.first_name}</p>
-          <p> employee lastname:{empInfo.last_name}</p>
-          <p> employee email:{empInfo.email}</p>
+          <p> employee Id :{imageInfo.id} </p>
+          <p> employee firstname:{imageInfo.first_name}</p>
+          <p> employee lastname:{imageInfo.last_name}</p>
+          <p> employee email:{imageInfo.email}</p>
         </Modal.Body>
 
         <Modal.Footer>

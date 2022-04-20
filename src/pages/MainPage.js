@@ -61,7 +61,7 @@ const MainPage = () => {
   };
 
   const [empDetails, setempDetails] = useState(empjsondata.data);
-  const [empInfo, setEmpInfo] = useState([]);
+  const [imageInfo, setImageInfo] = useState([]);
   console.log("empdata:", empjsondata.data);
   const [show,setShow]=useState(false)
   const [showModal,setShowModal]=useState(false)
@@ -83,7 +83,7 @@ const MainPage = () => {
           {empDetails.map((employee) => {
             return (
             <>
-           {show && <DisplayEmployees employee={employee} handleToggle={handleToggle} showModal={showModal} handleShow={handleShow}/>}
+           {show && <DisplayEmployees imageInfo={imageInfo} handleToggle={handleToggle} showModal={showModal} handleShow={handleShow}/>}
             </>
             )
           })}

@@ -5,7 +5,7 @@ const DisplayEmployees=({employee,handleShow})=>{
     return(
         <>
         
-         <div key={employee.id} onClick={()=>{handleShow(employee)}}>
+         <div key={employee.id}>
                   <h5>
                     <strong>
                       {employee.id}: {employee.first_name} {employee.last_name}
@@ -14,7 +14,7 @@ const DisplayEmployees=({employee,handleShow})=>{
 
                   <p>{employee.email}</p>
 
-                  <img src={employee.avatar}/>
+                  <img src={employee.avatar}  onClick={()=>{handleShow(employee)}}/>
 
                 </div>
         </>
