@@ -12,6 +12,7 @@
 img {
   display: inline-block;
   max-width: 100%;
+  cursor: pointer;
 }
 
 .margin{

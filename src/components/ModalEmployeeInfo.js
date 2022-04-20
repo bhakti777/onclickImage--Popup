@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 const ModalEmployeeInfo = ({ imageInfo, showModal, handleClose }) => {
   return (
     <>
-      <Modal showModal={showModal} onHide={handleClose}>
+      <Modal show={showModal} onHide={handleClose}> //here show is a property 
         <Modal.Header closeButton>
           <strong>Employee Details: </strong>
         </Modal.Header>

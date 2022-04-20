@@ -61,16 +61,19 @@ const MainPage = () => {
   };
 
   const [empDetails, setempDetails] = useState(empjsondata.data);
-  const [imageInfo, setImageInfo] = useState([]);
-  console.log("empdata:", empjsondata.data);
-  const [show,setShow]=useState(false)
-  const [showModal,setShowModal]=useState(false)
+  const [imageInfo, setImageInfo] = useState([]);// to store onclick image ,data
+  const [show, setShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
+  const handleShow = (employeeDetails) => {
+    setShowModal(true);
+    setImageInfo(employeeDetails); //set mapped employee data to new state 
+    console.log("empData=>", employeeDetails);
+  };
 
-  const handleToggle=()=>{
-      setShow(!show)
-  }
+  const handleToggle = () => {
+    setShow(!show);
+  };
 
   return (
     <>
@@ -82,15 +85,28 @@ const MainPage = () => {
         <div className="flex" show={show}>
           {empDetails.map((employee) => {
             return (
-            <>
-           {show && <DisplayEmployees employee={employee} handleToggle={handleToggle} showModal={showModal} handleShow={handleShow} imageInfo={imageInfo}/>}
-            </>
-            )
+              <>
+                {show && (
+                  <DisplayEmployees
+                    employee={employee}
+                    handleToggle={handleToggle}
+                    showModal={showModal}
+                    handleShow={handleShow}
+                    imageInfo={imageInfo}
+                  />
+                )}
+              </>
+            );
           })}
         </div>
 
-        {showModal && <ModalEmployeeInfo imageInfo={imageInfo} showModal={showModal} handleClose={handleClose} />}
-
+        {showModal && (
+          <ModalEmployeeInfo
+            imageInfo={imageInfo}
+            showModal={showModal}
+            handleClose={handleClose}
+          />
+        )}
       </Container>
     </>
   );
