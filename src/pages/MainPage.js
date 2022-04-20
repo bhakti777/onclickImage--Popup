@@ -90,9 +90,7 @@ const MainPage = () => {
                   <DisplayEmployees
                     employee={employee}
                     handleToggle={handleToggle}
-                    showModal={showModal}
                     handleShow={handleShow}
-                    imageInfo={imageInfo}
                   />
                 )}
               </>

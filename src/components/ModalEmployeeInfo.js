@@ -11,10 +11,10 @@ const ModalEmployeeInfo = ({ imageInfo, showModal, handleClose }) => {
         </Modal.Header>
 
         <Modal.Body>
-          <p> employee Id :{imageInfo.id} </p>
-          <p> employee firstname:{imageInfo.first_name}</p>
-          <p> employee lastname:{imageInfo.last_name}</p>
-          <p> employee email:{imageInfo.email}</p>
+          <p> employee Id : <strong>{imageInfo.id}</strong> </p>
+          <p> employee firstname: <strong>{imageInfo.first_name}</strong></p>
+          <p> employee lastname:<strong> {imageInfo.last_name}</strong></p>
+          <p> employee email: <strong>{imageInfo.email}</strong></p>
         </Modal.Body>
 
         <Modal.Footer>
